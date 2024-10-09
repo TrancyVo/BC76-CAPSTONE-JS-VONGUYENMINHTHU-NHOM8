@@ -1,0 +1,200 @@
+$fs-mobile-title: 18px;
+$fs-mobile-paragraph: 16px;
+$fs-mobile: 13px;
+
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+$mobile-width: 576px;
+$tablet-width: 768px; //md
+$desktop-width: 1200px; //xl
+
+// MIXIN
+@mixin styleText($color, $fs, $fw: 500) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+  margin-bottom: 0;
+}
+@mixin styleButton($color, $bgColor, $py, $px) {
+  color: $color;
+  background-color: $bgColor;
+  padding: $py $px;
+  border: 1px solid transparent;
+}
+@mixin mobile {
+  @media (max-width: #{$mobile -width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+.product {
+  margin: 70px 0;
+  .product_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+    @include desktop() {
+      flex-direction: column;
+      justify-content: start;
+      margin-top: 0;
+      gap: 15px;
+    }
+    img {
+      width: 20%;
+      border-radius: 8px;
+      @include desktop() {
+        width: 100%;
+      }
+    }
+  }
+  .product_center {
+    img {
+      width: 100%;
+    }
+  }
+  .product_right {
+    .product_title {
+      h4 {
+        @include styleText(#d33918, $fs-mobile-paragraph);
+      }
+      h1 {
+        @include styleText(#111111, 30px, bold);
+      }
+      p {
+        @include styleText(#111, 16px);
+      }
+    }
+    .product_price {
+      margin: 40px 0;
+      p {
+        @include styleText(#111, 20px, 500);
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    .product_color {
+      display: flex;
+      gap: 10px;
+      margin: 40px 0;
+      img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        transition: all 0.5s;
+        &:hover {
+          border-color: #bdb093;
+        }
+      }
+    }
+    .product_size {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      .size_top {
+        display: flex;
+        justify-content: space-between;
+        p {
+          @include styleText(#111, $fs-mobile-paragraph, 600);
+        }
+        a {
+          text-decoration: none;
+          @include styleText(#111, $fs-mobile-paragraph);
+        }
+      }
+      .size_bottom {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+        .size_item {
+          padding: 10px 20px;
+          border: 1px solid #bdb093;
+          text-align: center;
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .product_group_button {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .signIn {
+        @include styleButton(#fff, black, 18px, 24px);
+        border-radius: 30px;
+      }
+      .like {
+        @include styleButton(black, transparent, 18px, 24px);
+        border-radius: 30px;
+        border-color: #111111;
+      }
+    }
+    .product_desc {
+      margin-top: 28px;
+      h5 {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.relative_product {
+  .relative_product_title {
+    margin-bottom: 30px;
+    h1 {
+      @include styleText(#bdb093, 20px, bold);
+      text-transform: uppercase;
+      text-align: center;
+      background-color: black;
+      padding: 10px 0;
+      @include desktop() {
+        font-size: 30px;
+      }
+    }
+  }
+  .top_interesting_content {
+    .top_interesting_item {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .top_interesting_text {
+        margin: 15px 0 40px;
+        .subtitle {
+          margin-bottom: 0;
+          color: #bdb093;
+        }
+        h3 {
+          @include styleText(black, 20px, bold);
+        }
+        p {
+        }
+        a {
+          text-decoration: none;
+          button {
+            @include styleButton(white, #bdb093, 10px, 20px);
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+}

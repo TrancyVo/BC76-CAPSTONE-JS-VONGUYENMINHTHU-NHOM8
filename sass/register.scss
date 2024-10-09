@@ -1,0 +1,25 @@
+// MIXIN
+@mixin styleText($color, $fs, $fw: 500) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+@mixin styleButton($color, $bgColor, $py, $px) {
+  color: $color;
+  background-color: $bgColor;
+  padding: $py $px;
+  border: 1px solid transparent;
+}
+.register {
+  h1 {
+    @include styleText(#bdb093, 50px, 900);
+  }
+  .btnSubmit {
+    text-align: center;
+    margin-top: 30px;
+    button {
+      @include styleButton(white, #bdb093, 10px, 30px);
+      border-radius: 6px;
+    }
+  }
+}

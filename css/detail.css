@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+.product {
+  margin: 70px 0;
+}
+.product .product_left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+@media (min-width: 1200px) {
+  .product .product_left {
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 0;
+    gap: 15px;
+  }
+}
+.product .product_left img {
+  width: 20%;
+  border-radius: 8px;
+}
+@media (min-width: 1200px) {
+  .product .product_left img {
+    width: 100%;
+  }
+}
+.product .product_center img {
+  width: 100%;
+}
+.product .product_right .product_title h4 {
+  color: #d33918;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.product .product_right .product_title h1 {
+  color: #111111;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.product .product_right .product_title p {
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.product .product_right .product_price {
+  margin: 40px 0;
+}
+.product .product_right .product_price p {
+  color: #111;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.product .product_right .product_price p span {
+  font-weight: bold;
+}
+.product .product_right .product_color {
+  display: flex;
+  gap: 10px;
+  margin: 40px 0;
+}
+.product .product_right .product_color img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: all 0.5s;
+}
+.product .product_right .product_color img:hover {
+  border-color: #bdb093;
+}
+.product .product_right .product_size {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.product .product_right .product_size .size_top {
+  display: flex;
+  justify-content: space-between;
+}
+.product .product_right .product_size .size_top p {
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.product .product_right .product_size .size_top a {
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.product .product_right .product_size .size_bottom {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.product .product_right .product_size .size_bottom .size_item {
+  padding: 10px 20px;
+  border: 1px solid #bdb093;
+  text-align: center;
+}
+.product .product_right .product_size .size_bottom .size_item p {
+  margin-bottom: 0;
+}
+.product .product_right .product_group_button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product .product_right .product_group_button .signIn {
+  color: #fff;
+  background-color: black;
+  padding: 18px 24px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+}
+.product .product_right .product_group_button .like {
+  color: black;
+  background-color: transparent;
+  padding: 18px 24px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  border-color: #111111;
+}
+.product .product_right .product_desc {
+  margin-top: 28px;
+}
+.product .product_right .product_desc h5 {
+  font-weight: 700;
+}
+
+.relative_product .relative_product_title {
+  margin-bottom: 30px;
+}
+.relative_product .relative_product_title h1 {
+  color: #bdb093;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: black;
+  padding: 10px 0;
+}
+@media (min-width: 1200px) {
+  .relative_product .relative_product_title h1 {
+    font-size: 30px;
+  }
+}
+.relative_product .top_interesting_content .top_interesting_item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.relative_product .top_interesting_content .top_interesting_item .top_interesting_text {
+  margin: 15px 0 40px;
+}
+.relative_product .top_interesting_content .top_interesting_item .top_interesting_text .subtitle {
+  margin-bottom: 0;
+  color: #bdb093;
+}
+.relative_product .top_interesting_content .top_interesting_item .top_interesting_text h3 {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.relative_product .top_interesting_content .top_interesting_item .top_interesting_text a {
+  text-decoration: none;
+}
+.relative_product .top_interesting_content .top_interesting_item .top_interesting_text a button {
+  color: white;
+  background-color: #bdb093;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}/*# sourceMappingURL=detail.css.map */

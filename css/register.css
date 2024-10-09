@@ -1,0 +1,16 @@
+.register h1 {
+  color: #bdb093;
+  font-size: 50px;
+  font-weight: 900;
+}
+.register .btnSubmit {
+  text-align: center;
+  margin-top: 30px;
+}
+.register .btnSubmit button {
+  color: white;
+  background-color: #bdb093;
+  padding: 10px 30px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}/*# sourceMappingURL=register.css.map */
