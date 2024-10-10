@@ -56,7 +56,10 @@ function getValueForm() {
           }
           break;
         case "password":
-          if (!checkPassword(theSpanThongBao, value)) {
+          if (
+            !checkPassword(theSpanThongBao, value) ||
+            !checkMinMaxValue(theSpanThongBao, value, 6, 12)
+          ) {
             flag = false;
           }
           break;
