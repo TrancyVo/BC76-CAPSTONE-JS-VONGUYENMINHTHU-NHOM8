@@ -24,6 +24,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- LINK: TOASTIFY  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="./../css/index.css" />
     <link rel="stylesheet" href="./../css/register.css" />
   </head>
@@ -89,77 +95,90 @@
               <!-- input: email  -->
               <div class="col-12 col-lg-6">
                 <div class="mb-3">
-                  <label for="" class="form-label">Email</label>
+                  <label for="email" class="form-label">Email</label>
                   <input
                     type="text"
                     class="form-control"
-                    name=""
+                    name="email"
                     id="email"
                     aria-describedby="helpId"
+                    data-validation="email"
                     placeholder=""
                   />
+                  <span class="text-danger"></span>
                 </div>
               </div>
               <!-- input: name  -->
               <div class="col-12 col-lg-6">
                 <div class="mb-3">
-                  <label for="" class="form-label">Name</label>
+                  <label for="name" class="form-label">Name</label>
                   <input
                     type="text"
                     class="form-control"
-                    name=""
+                    name="name"
                     id="name"
                     aria-describedby="helpId"
+                    autocomplete="username"
+                    data-validation="name"
                     placeholder=""
                   />
+                  <span class="text-danger"></span>
                 </div>
               </div>
               <!-- input  -->
               <div class="col-12 col-lg-6">
                 <div class="mb-3">
-                  <label for="" class="form-label">Password</label>
+                  <label for="password" class="form-label">Password</label>
                   <input
                     type="password"
                     class="form-control"
-                    name=""
                     id="password"
                     aria-describedby="helpId"
-                    placeholder=""
+                    name="password"
+                    data-validation="password"
+                    autocomplete="new-password"
                   />
+                  <span class="text-danger"></span>
                 </div>
               </div>
               <!-- input  -->
               <div class="col-12 col-lg-6">
                 <div class="mb-3">
-                  <label for="" class="form-label">Phone number</label>
+                  <label for="phone" class="form-label">Phone number</label>
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
-                    name=""
+                    name="phone"
                     id="phone"
                     aria-describedby="helpId"
+                    data-validation="phone"
                     placeholder=""
                   />
+                  <span class="text-danger"></span>
                 </div>
               </div>
               <!-- input  -->
               <div class="col-12 col-lg-6">
                 <div class="mb-3">
-                  <label for="" class="form-label">Password Confirmation</label>
+                  <label for="passwordConfirmation" class="form-label"
+                    >Password Confirmation</label
+                  >
                   <input
                     type="password"
                     class="form-control"
-                    name=""
-                    id="password2"
+                    id="passwordConfirmation"
+                    name="passwordConfirmation"
                     aria-describedby="helpId"
-                    placeholder=""
+                    data-validation="passwordConfirmation"
+                    autocomplete="new-password"
                   />
+                  <span class="text-danger"></span>
                 </div>
               </div>
               <!-- input  -->
               <div class="col-12 col-lg-6">
                 <div class="mb-3">
-                  <label for="" class="form-label d-block">Gender</label>
+                  <label for="gender" class="form-label d-block">Gender</label>
                   <form action="">
                     <input
                       type="radio"
@@ -175,11 +194,16 @@
                       value="female"
                     />
                     <label class="form-check-label">Female</label>
+                    <span
+                      id="genderInform"
+                      class="text-danger d-block mt-2"
+                    ></span>
                   </form>
                 </div>
               </div>
+
               <div class="btnSubmit col-12">
-                <button type="submit" id="btnReg">Submit</button>
+                <button type="submit">Submit</button>
               </div>
             </div>
           </div>
@@ -252,5 +276,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- JS: TOASTIFY  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <!-- JS: VALIDATION  -->
+    <script src="./../js/validation/validation.js"></script>
+
+    <!-- JS: REGISTER.JS  -->
+    <script src="./../js/register.js"></script>
   </body>
 </html>
